@@ -11,6 +11,9 @@ function App() {
     <div>
       <h2>Hello</h2>
       <Movie name="😍" />
+      <Movie name="😁" />
+      <Movie name="😈" />
+      <Movie name="🥶" />
     </div>
   );
 }
