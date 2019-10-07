@@ -1,4 +1,28 @@
 import React from "react";
+import PropTypes from "prop-types";
+
+const emojiLove = [
+  {
+    id: 1,
+    name: "love",
+    img: "😍"
+  },
+  {
+    id: 2,
+    name: "sad",
+    img: "🥶"
+  },
+  {
+    id: 3,
+    name: "angry",
+    img: "😈"
+  },
+  {
+    id: 4,
+    name: "wow",
+    img: "😻"
+  }
+];
 
 // Component2
 function Movie({ name, img }) {
@@ -11,31 +35,8 @@ function Movie({ name, img }) {
   );
 }
 
-const emojiLove = [
-  {
-    id: 1,
-    name: "love",
-    image: "😍"
-  },
-  {
-    id: 2,
-    name: "sad",
-    image: "🥶"
-  },
-  {
-    id: 3,
-    name: "angry",
-    image: "😈"
-  },
-  {
-    id: 4,
-    name: "wow",
-    image: "😻"
-  }
-];
-
 function renderEmoji(item) {
-  return <Movie key={item.id} name={item.name} img={item.image} />;
+  return <Movie key={item.id} name={item.name} img={item.img} />;
 }
 
 // Component1
