@@ -1,24 +1,23 @@
 /* eslint-disable */
 import React from "react";
+import A from "./A";
+import LifeCycleAPI from "./LifeCycleAPI";
 
 class App extends React.Component {
   state = {
-    count: 0
+    num: 1
   };
-
-  add = () => {
-    this.setState(current => ({ count: current.count + 1 }));
+  handleClick = () => {
+    this.setState({ num: this.state.num + 1 });
   };
-  min = () => {
-    this.setState(current => ({ count: current.count - 1 }));
-  };
-
   render() {
     return (
       <div>
-        <h1>The number : {this.state.count}</h1>
-        <button onClick={this.add}> + </button>
-        <button onClick={this.min}> - </button>
+        <br />
+        <A />
+        <br />
+        <LifeCycleAPI value={this.state.num} />
+        <button onClick={this.handleClick}>ClickMe</button>
       </div>
     );
   }
