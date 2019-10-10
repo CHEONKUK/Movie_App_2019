@@ -41,6 +41,7 @@ class LifeCycleAPI extends React.Component {
       <div ref={ref => (this.myDiv = ref)}>
         <h3>LifeCycleAPI</h3>
         <div>
+          {/* <p> error test : {this.props.missing.what} </p> */}
           <p>props : {this.props.value} </p>
           <p>state : {this.state.value} </p>
         </div>

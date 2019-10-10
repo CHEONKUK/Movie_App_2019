@@ -5,13 +5,31 @@ import LifeCycleAPI from "./LifeCycleAPI";
 
 class App extends React.Component {
   state = {
-    num: 1
+    num: 1,
+    error: false
   };
+
   handleClick = () => {
     this.setState({ num: this.state.num + 1 });
   };
+
+  componentDidCatch(error, info) {
+    console.log("# Error  : " + error);
+    console.log("# Info   : " + info.value);
+    this.setState({
+      error:true
+    })
+  }
+
   render() {
-    return (
+    
+    if(this.state.error){
+      return(
+        <div>ERROR</div>
+      )
+    }
+    
+    return(
       <div>
         <br />
         <A />
