@@ -7,7 +7,7 @@ class LifeCycleAPI extends React.Component {
   }
 
   componentDidMount() {
-    console.log("2. CompoentDidMount");
+    console.log("3. CompoentDidMount");
     console.log(this.myDiv.getBoundingClientRect());
   }
 
@@ -32,11 +32,13 @@ class LifeCycleAPI extends React.Component {
     return true;
   }
   componentDidUpdate(prevProps, prevState) {
+    console.log("5. didUpdate");
     if (this.props.value !== prevProps.value) {
       console.log("# propsValue Change", this.props.value);
     }
   }
   render() {
+    console.log("2. Renter");
     return (
       <div ref={ref => (this.myDiv = ref)}>
         <h3>LifeCycleAPI</h3>
